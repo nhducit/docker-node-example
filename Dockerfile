@@ -6,6 +6,7 @@ RUN mkdir -p /usr/src/dockernode/app
 WORKDIR /usr/src/dockernode
 
 #Copy sorce code to docker container
+COPY package.json /usr/src/dockernode
 COPY yarn.lock /usr/src/dockernode
 COPY app /usr/src/dockernode/app
 #
