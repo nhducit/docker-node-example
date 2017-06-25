@@ -9,7 +9,7 @@ WORKDIR /usr/src/dockernode
 COPY package.json /usr/src/dockernode
 COPY yarn.lock /usr/src/dockernode
 COPY app /usr/src/dockernode/app
-#
+#install dependcies
 RUN yarn install
 
 #expose application ports
