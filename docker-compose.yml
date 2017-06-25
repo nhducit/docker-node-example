@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dockernode:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/src/dockernode
+    ports:
+      - "3003:3003"
+    environment:
+      NODE_ENV: development
+    command: npm run start
